@@ -126,20 +126,17 @@ p{
     font-style: normal;
     list-style-type: none;
     display: flex;
-    position: relative;
 }
 .contacts-item:not(:first-child){
     margin-left: 50px;
-}
-.contacts-item{
-    display: flex;
-    align-items: center;
 }
 .contacts-mail,
 .contacts-tel{
     text-decoration: none;
     color: var(--contacts-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
 }
 .contacts-mail:hover,
 .contacts-tel:hover,
@@ -505,7 +502,7 @@ p{
 .project-link{
     display: block;
     text-decoration: none;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-link:hover,
 .project-link:focus{
@@ -654,6 +651,8 @@ p{
     margin-right: 12px;
     outline: none;
     width: 346px;
+    background-color: transparent;
+    color: var(--white-color);
 }
 .footer__form-btn{
     display: flex;
@@ -751,7 +750,7 @@ p{
 }
 .contact__form-input-wrapper{
     position: relative;
-    margin-top: 4px;
+  
 }
 .contact__form-input{
     height: 40px;
@@ -762,6 +761,7 @@ p{
     padding-right: 10px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+    margin-top: 4px;
 }
 .contact__form-icon{
     position: absolute;
@@ -771,11 +771,7 @@ p{
     cursor: pointer;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact__form-input:hover,
-.contact__form-input:focus{
-    outline: none;
-    border-color: var(--link-color);
-}
+
 .contact__form-input-wrapper:hover .contact__form-icon,
 .contact__form-input-wrapper:focus .contact__form-icon{
     fill: var(--link-color);
@@ -798,19 +794,16 @@ p{
     background-color: var(--link-color);
     background-image: url('../images/icon_chekcbox.svg');
     background-position: center;
-    border: none;
+    background-repeat: no-repeat;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact__form-checkbox:focus + .contact__form-checkbox-label::before{
-    background-color: var(--link-color);
-    background-image: url('../images/icon_chekcbox.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color: var(--link-color);
 }
 .contact__form-checkbox-label{
     display: flex;
     align-items: center;
+    justify-content: center;
     font-size: 14px;
     letter-spacing: 0.03em;
     line-height: 1.7;
@@ -831,7 +824,7 @@ p{
 }
 .contact__form-btn{
     align-self: center;
-    padding: 10px 56px;
+    padding: 10px 55px;
     background-color: var(--link-color);
     color: var(--white-color);
     font-weight: 700;
@@ -839,7 +832,7 @@ p{
     letter-spacing: 0.06em;
     line-height: 1.9;
     border-radius: 4px;
-    margin-top: 30px;
+    margin-top: 20px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact__form-btn:hover,
