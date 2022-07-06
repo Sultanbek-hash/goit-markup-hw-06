@@ -772,8 +772,12 @@ p{
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact__form-input-wrapper:hover .contact__form-icon,
-.contact__form-input-wrapper:focus .contact__form-icon{
+.contact__form-input:focus{
+    outline: none;
+    border-color: var(--link-color);
+}
+
+.contact__form-input:focus + .contact__form-icon{
     fill: var(--link-color);
 }
 .contact__form-message{
@@ -784,11 +788,11 @@ p{
     resize: none;
     margin-top: 4px;
     padding: 12px 16px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact__form-message:focus{
     outline: none;
-    border-color: var(--link-color);
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color: var(--link-color); 
 }
 .contact__form-checkbox:checked + .contact__form-checkbox-label::before{
     background-color: var(--link-color);
